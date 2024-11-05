@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Card Offer Promotion</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #007bff;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* Image styling */
+    img {
+      width: 80%; /* Responsive image */
+      max-width: 400px; /* Max width for larger screens */
+      height: auto;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Button styling */
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button-wrapper {
+      width: calc(33% - 10px);
+      text-align: center;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Special Gift Card Offer!</h1>
+    <p>Click any of the buttons below to unlock exclusive deals!</p>
+  </div>
+
+  <!-- Image -->
+  <img src="https://m.media-amazon.com/images/I/71bP76bmR5L.jpg" alt="Gift Card Offer">
+
+  <div class="buttons-container">
+    <!-- Creating 7 buttons with serial links -->
+    <div class="button-wrapper">
+      <button id="linkButton1">Earn $10</button>
+    </div>
+    <div class="button-wrapper">
+      <button id="linkButton2">Earn $20</button>
+    </div>
+    <div class="button-wrapper">
+      <button id="linkButton3">Earn $30</button>
+    </div>
+    <div class="button-wrapper">
+      <button id="linkButton4">Earn $40</button>
+    </div>
+    <div class="button-wrapper">
+      <button id="linkButton5">Earn $50</button>
+    </div>
+    <div class="button-wrapper">
+      <button id="linkButton6">Earn $60</button>
+    </div>
+    <div class="button-wrapper">
+      <button id="linkButton7">Earn $70</button>
+    </div>
+  </div>
+
+  <script>
+    // Assigning the serial links for the buttons
+    const links = [
+      "https://daringdemand.com/b.3LVA0OPq3Jp/v/bkmjVcJTZGDE0s1/NuzME/xQO/TYU-0BLLTXUt3GMHTRE/5MNlT-Uy",
+      "https://chikraighotoops.com/4/8468543",
+      "https://www.profitablecpmrate.com/f0d362189?key=e9dec77cfc4a4b99a12464edc98fe6cc",
+      "https://chikraighotoops.com/4/8468545",
+      "https://wwp.aisorc.com/redirect-zone/026781d7",
+      "https://www.profitablecpmrate.com/itugp3b4?key=fc9ff6b6ec1304f024ef2679b81d8aa2",
+      "https://daringdemand.com/b.3eVG0/Pe3Up_v/brm/V/JoZ/Dh0W1WNwz-ERxlOMTfQB2ILlTxU-3oMPT/EP5/NrDCcf"
+    ];
+
+    // Assigning event listeners to each button
+    document.getElementById("linkButton1").addEventListener("click", function() {
+      window.open(links[0], "_blank");
+      startTimer(this);
+    });
+    document.getElementById("linkButton2").addEventListener("click", function() {
+      window.open(links[1], "_blank");
+      startTimer(this);
+    });
+    document.getElementById("linkButton3").addEventListener("click", function() {
+      window.open(links[2], "_blank");
+      startTimer(this);
+    });
+    document.getElementById("linkButton4").addEventListener("click", function() {
+      window.open(links[3], "_blank");
+      startTimer(this);
+    });
+    document.getElementById("linkButton5").addEventListener("click", function() {
+      window.open(links[4], "_blank");
+      startTimer(this);
+    });
+    document.getElementById("linkButton6").addEventListener("click", function() {
+      window.open(links[5], "_blank");
+      startTimer(this);
+    });
+    document.getElementById("linkButton7").addEventListener("click", function() {
+      window.open(links[6], "_blank");
+      startTimer(this);
+    });
+
+    function startTimer(button) {
+      let countdownTime = 40;
+      button.innerText = `Timer: ${countdownTime}s`;
+      let countdown = setInterval(function() {
+        countdownTime--;
+        button.innerText = `Timer: ${countdownTime}s`;
+
+        if (countdownTime <= 0) {
+          clearInterval(countdown);
+          button.innerText = "Done";
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
